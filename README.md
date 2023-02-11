@@ -1,10 +1,10 @@
-# CI-CD-Java-sprint-kafka-k8s
+# CI/CD
 
 To deploy a Java Spring Boot application to AWS with Kubernetes and Kafka using GitLab, you can follow the steps below:
 
 - Create a GitLab repository: Store your Java Spring Boot code in a GitLab repository.
 
-- Define a .gitlab-ci.yml file: This file specifies the stages and steps of your GitLab CI/CD pipeline. In this file, you can define build, test, and deploy stages, and configure the necessary steps to compile your code, run tests, and deploy your application to AWS.
+- Define a ```.gitlab-ci.yml``` file: This file specifies the stages and steps of your GitLab CI/CD pipeline. In this file, you can define build, test, and deploy stages, and configure the necessary steps to compile your code, run tests, and deploy your application to AWS.
 
 - Package your application: Use a packaging tool like Maven to compile and package your code into a JAR or WAR file.
 
@@ -15,3 +15,13 @@ To deploy a Java Spring Boot application to AWS with Kubernetes and Kafka using 
 - Continuous delivery: Once your pipeline is configured and tested, you can set it up for continuous delivery. This means that every time you push changes to your GitLab repository, the pipeline will automatically run, building, testing, and deploying your changes to AWS.
 
 With these steps, you can automate the deployment of your Java Spring Boot application to AWS with Kubernetes and Kafka using GitLab's CI/CD capabilities
+
+# Deploy File
+
+These files are just examples and will likely need to be customized to fit your specific requirements and infrastructure setup. 
+
+- The ```kubeconfig.yml``` file provides the configuration information needed to connect to your Kubernetes cluster on AWS. 
+
+- The ```deployment.yml``` file specifies the deployment configuration, including the number of replicas, the image to be used, and any environment variables that need to be passed to the container. 
+
+- The ```service.yml``` file specifies the service configuration, including the selector for the pods, the ports to be exposed, and the type of service (e.g. LoadBalancer).
